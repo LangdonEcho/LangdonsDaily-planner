@@ -10,57 +10,57 @@ $( document ).ready(function() {
 
 $("#hour7").on("click", function() {
   var description = $(".h7").val();
-  localStorage.setItem("7 AM", description)
+  localStorage.setItem("7AM", description)
 });
 $("#hour7").val(localStorage.getItem("7 AM"));
 
 $("#hour8").on("click", function() {
   var description = $(".h8").val()
-  localStorage.setItem("8 AM", description)
+  localStorage.setItem("8AM", description)
 });
 $("#hour8").val(localStorage.getItem("8 AM"))
 
 $("#hour9").on("click", function() {
   var description = $(".h9").val();
-  localStorage.setItem("hour9", description)
+  localStorage.setItem("9AM", description)
 });
-$("#hour9").val(localStorage.getItem("9 AM"))
+$("#hour9").val(localStorage.getItem("9AM"))
 
 $(".hour10").on("click", function() {
   var description = $(".h10").val();
-  localStorage.setItem("hour10", description)
+  localStorage.setItem("10AM", description)
 });
-$("#hour10").val(localStorage.getItem("10 AM"))
+$("#hour10").val(localStorage.getItem("10AM"))
 
 $(".hour11").on("click", function() {
   var description = $(".h11").val();
-  localStorage.setItem("hour11", description)
+  localStorage.setItem("11AM", description)
 });
-$("#hour11").val(localStorage.getItem("11 AM"))
+$("#hour11").val(localStorage.getItem("11AM"))
 
 $(".hour12").on("click", function() {
   var description = $(".h12").val();
- localStorage.setItem("hour12", description)
+ localStorage.setItem("12AM", description)
 }); 
-$("#hour12").val(localStorage.getItem("12 AM"))
+$("#hour12").val(localStorage.getItem("12AM"))
 
 $(".hour13").on("click", function() {
   var description = $(".h1").val();
-  localStorage.setItem("hour1", description)
+  localStorage.setItem("1PM", description)
 });
-$("#hour13").val(localStorage.getItem("1 PM"))
+$("#hour13").val(localStorage.getItem("1PM"))
 
 $(".hour14").on("click", function() {
   var description = $(".h2").val();
-  localStorage.setItem("hour2", description)
+  localStorage.setItem("2PM", description)
 });
-$("#hour14").val(localStorage.getItem("2 PM"))
+$("#hour14").val(localStorage.getItem("2PM"))
 
 $(".hour15").on("click", function() {
   var description = $(".h3").val();
-  localStorage.getItem("hour3", description)
+  localStorage.getItem("3PM", description)
 });
-$("#hour15").val(localStorage.getItem("3 PM"))
+$("#hour15").val(localStorage.getItem("3PM"))
 
     //Gets the current time and turns the current hour into a number.
 var currentTime = moment().format('H');
@@ -78,7 +78,7 @@ var h8 = document.querySelector(".h8");
 
 var hr9 = document.querySelector(".hr9").textContent;
 hr9 = parseInt(hr9[1]) +10;
-var e11 = document.querySelector(".h9");
+var h9 = document.querySelector(".h9");
 
 var hr10 = document.querySelector(".hr10").textContent;
 hr10 = parseInt(hr10[1]) + 10;
@@ -106,8 +106,9 @@ var h3 = document.querySelector(".h3");
 
 
 //function that color codes the various time rows depending on current hour.
-var hours  = [h7, h8, h9, h10, h11, h12, h1, h2, h3];
-var inputs = [hr7, hr8, hr9, hr10, hr11, hr12, hr1, hr2, hr3];
+var inputs = [h7, h8, h9, h10, h11, h12, h1, h2, h3];
+var hours  = [hr7, hr8, hr9, hr10, hr11, hr12, hr1, hr2, hr3];
+
 function colorcoding() {
     for (i = 0; i < hours.length; i ++) {
         if (hours[i] < currentTime) {
