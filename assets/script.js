@@ -1,10 +1,9 @@
 // A $( document ).ready() block.
 $( document ).ready(function() {
     console.log( "ready!" );
-});
 
- moment().format('MMMM Do YYYY, h:mm:ss a');
- moment().format('dddd'); 
+    var today = moment().format("dddd [|] LL [| Week] W");
+$("#currentDay").append(today)
 
 
  // saveButton click listener function
@@ -13,55 +12,55 @@ $("#hour7").on("click", function() {
   var description = $(".h7").val();
   localStorage.setItem("7AM", description)
 });
-$("#hour7").val(localStorage.getItem("7 AM"));
+$(".h7").val(localStorage.getItem("7AM"));
 
 $("#hour8").on("click", function() {
   var description = $(".h8").val()
   localStorage.setItem("8AM", description)
 });
-$("#hour8").val(localStorage.getItem("8 AM"))
+$(".h8").val(localStorage.getItem("8AM"))
 
 $("#hour9").on("click", function() {
   var description = $(".h9").val();
   localStorage.setItem("9AM", description)
 });
-$("#hour9").val(localStorage.getItem("9AM"))
+$(".h9").val(localStorage.getItem("9AM"))
 
 $(".hour10").on("click", function() {
   var description = $(".h10").val();
   localStorage.setItem("10AM", description)
 });
-$("#hour10").val(localStorage.getItem("10AM"))
+$(".h10").val(localStorage.getItem("10AM"))
 
 $(".hour11").on("click", function() {
   var description = $(".h11").val();
   localStorage.setItem("11AM", description)
 });
-$("#hour11").val(localStorage.getItem("11AM"))
+$(".h11").val(localStorage.getItem("11AM"))
 
 $(".hour12").on("click", function() {
   var description = $(".h12").val();
  localStorage.setItem("12AM", description)
 }); 
-$("#hour12").val(localStorage.getItem("12AM"))
+$(".h12").val(localStorage.getItem("12AM"))
 
 $(".hour13").on("click", function() {
   var description = $(".h1").val();
   localStorage.setItem("1PM", description)
 });
-$("#hour13").val(localStorage.getItem("1PM"))
+$(".h1").val(localStorage.getItem("1PM"))
 
 $(".hour14").on("click", function() {
   var description = $(".h2").val();
   localStorage.setItem("2PM", description)
 });
-$("#hour14").val(localStorage.getItem("2PM"))
+$(".h2").val(localStorage.getItem("2PM"))
 
 $(".hour15").on("click", function() {
   var description = $(".h3").val();
   localStorage.getItem("3PM", description)
 });
-$("#hour15").val(localStorage.getItem("3PM"))
+$(".h3").val(localStorage.getItem("3PM"))
 
     //Gets the current time and turns the current hour into a number.
 var currentTime = moment().format('H');
@@ -150,3 +149,4 @@ function colorcoding() {
     }
 }
 colorcoding();
+});
