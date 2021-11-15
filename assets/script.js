@@ -1,10 +1,11 @@
-
- moment().format('MMMM Do YYYY, h:mm:ss a');
- moment().format('dddd'); 
 // A $( document ).ready() block.
 $( document ).ready(function() {
     console.log( "ready!" );
 });
+
+ moment().format('MMMM Do YYYY, h:mm:ss a');
+ moment().format('dddd'); 
+
 
  // saveButton click listener function
 
@@ -66,6 +67,32 @@ $("#hour15").val(localStorage.getItem("3PM"))
 var currentTime = moment().format('H');
 currentTime = parseInt(currentTime);
 
+var hr7 = 7
+var hr7 = document.querySelector(".h7")
+
+var hr8 = 8
+var hr8 = document.querySelector(".h8")
+
+var hr9 = 9
+var hr9 = document.querySelector(".h9")
+
+var hr10 = 10
+var hr10 = document.querySelector(".h10")
+
+var hr11 = 11
+var hr11 = document.querySelector(".h11")
+
+var hr12 = 12
+var hr12 = document.querySelector(".h12")
+
+var hr1 = 13
+var hr1 = document.querySelector(".h1")
+
+var hr2 = 14
+var hr2 = document.querySelector(".h2")
+
+var hr3 = 15
+var hr3 = document.querySelector(".h3")
 //Getting the hours from the page and converting them into numbers.
 //Also getting each textarea.
 var hr7 = document.querySelector(".hr7").textContent;
