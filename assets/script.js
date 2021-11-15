@@ -1,10 +1,12 @@
 
  moment().format('MMMM Do YYYY, h:mm:ss a');
  moment().format('dddd'); 
- 
+// A $( document ).ready() block.
+$( document ).ready(function() {
+    console.log( "ready!" );
+});
 
  // saveButton click listener function
-
 
 $("#hour7").on("click", function() {
   var description = $(".h7").val();
@@ -59,15 +61,13 @@ $(".hour15").on("click", function() {
   localStorage.getItem("hour3", description)
 });
 $("#hour15").val(localStorage.getItem("3 PM"))
-    // Save text in local storage
-    localStorage.setItem(time, text);
 
     //Gets the current time and turns the current hour into a number.
 var currentTime = moment().format('H');
 currentTime = parseInt(currentTime);
 
 //Getting the hours from the page and converting them into numbers.
-//Also getting each texarea.
+//Also getting each textarea.
 var hr7 = document.querySelector(".hr7").textContent;
 hr7 = parseInt(hr7[0]);
 var h7 = document.querySelector(".h7");
@@ -89,19 +89,19 @@ hr11 = parseInt(hr11[0]) +12;0
 h11 = document.querySelector(".h11");
 
 var hr12 = document.querySelector(".hr12").textContent;
-hr12 = parseInt(t6[0]) +12;
+hr12 = parseInt(hr12[0]) +12;
 var h12 = document.querySelector(".h12");
 
 var hr1 = document.querySelector(".h1").textContent;
-hr1 = parseInt(t7[0]) +12;
+hr1 = parseInt(hr1[0]) +12;
 var h1 = document.querySelector(".h1");
 
 var hr2 = document.querySelector(".hr2").textContent;
-hr2 = parseInt(t8[0]) +12;
+hr2 = parseInt(hr2[0]) +12;
 var h2 = document.querySelector(".h2");
 
 var hr3 = document.querySelector(".hr3").textContent;
-hr3 = parseInt(t9[0]) +12;
+hr3 = parseInt(hr3[0]) +12;
 var h3 = document.querySelector(".h3");
 
 
