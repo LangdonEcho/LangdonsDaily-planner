@@ -5,7 +5,7 @@ $( document ).ready(function() {
     var today = moment().format("dddd [|] LL [| Week] W");
 $("#currentDay").append(today)
 
-var currentTime = 10
+
  // saveButton click listener function
 
 $("#hour7").on("click", function() {
@@ -45,22 +45,22 @@ $(".hour12").on("click", function() {
 $(".h12").val(localStorage.getItem("12AM"))
 
 $(".hour13").on("click", function() {
-  var description = $(".h1").val();
+  var description = $(".h13").val();
   localStorage.setItem("1PM", description)
 });
-$(".h1").val(localStorage.getItem("1PM"))
+$(".h13").val(localStorage.getItem("1PM"))
 
 $(".hour14").on("click", function() {
-  var description = $(".h2").val();
+  var description = $(".h14").val();
   localStorage.setItem("2PM", description)
 });
-$(".h2").val(localStorage.getItem("2PM"))
+$(".h14").val(localStorage.getItem("2PM"))
 
 $(".hour15").on("click", function() {
-  var description = $(".h3").val();
+  var description = $(".h15").val();
   localStorage.getItem("3PM", description)
 });
-$(".h3").val(localStorage.getItem("3PM"))
+$(".h15").val(localStorage.getItem("3PM"))
 
     //Gets the current time and turns the current hour into a number.
     var currentTime = moment().format('H');
@@ -100,22 +100,22 @@ var hr12 = document.querySelector(".hr12").textContent;
 hr12 = parseInt(hr12.replace("AM", ''))
 var h12 = document.querySelector(".h12");
 
-var hr1 = document.querySelector(".h1").textContent;
-hr1 = parseInt(hr1.replace("PM", ''))
-var h1 = document.querySelector(".h1");
+var hr13 = document.querySelector(".hr13").textContent;
+hr13 = parseInt(hr13.replace("PM", ''))
+var h13 = document.querySelector(".h13");
 
-var hr2 = document.querySelector(".hr2").textContent;
-hr2 = parseInt(hr2.replace("PM", ''))
-var h2 = document.querySelector(".h2");
+var hr14 = document.querySelector(".hr14").textContent;
+hr14 = parseInt(hr14.replace("PM", ''))
+var h14 = document.querySelector(".h14");
 
-var hr3 = document.querySelector(".hr3").textContent;
-hr3 = parseInt(hr3.replace("PM", ''))
-var h3 = document.querySelector(".h3");
+var hr15 = document.querySelector(".hr15").textContent;
+hr15 = parseInt(hr15.replace("PM", ''))
+var h15 = document.querySelector(".h15");
 
 
 //function that color codes the various time rows depending on current hour.
-var inputs = [h7, h8, h9, h10, h11, h12, h1, h2, h3];
-var hours  = [hr7, hr8, hr9, hr10, hr11, hr12, hr1, hr2, hr3];
+var inputs = [h7, h8, h9, h10, h11, h12, h13, h14, h15];
+var hours  = [hr7, hr8, hr9, hr10, hr11, hr12, hr13, hr14, hr15];
 
 function colorcoding() {
     for (i = 0; i < hours.length; i ++) {
