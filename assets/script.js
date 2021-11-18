@@ -5,7 +5,7 @@ $( document ).ready(function() {
     var today = moment().format("dddd [|] LL [| Week] W");
 $("#currentDay").append(today)
 
-
+var currentTime = 10
  // saveButton click listener function
 
 $("#hour7").on("click", function() {
@@ -65,33 +65,15 @@ $(".h3").val(localStorage.getItem("3PM"))
     //Gets the current time and turns the current hour into a number.
     var currentTime = moment().format('H');
     currentTime = parseInt(currentTime);
-
-//var h7 = 7
-//var hr7 = document.querySelector(".h7")
-
-//var h8 = 8
-//var hr8 = document.querySelector(".h8")
-
-//var h9 = 9
-//var hr9 = document.querySelector(".h9")
-
-//var h10 = 10
-//var hr10 = document.querySelector(".h10")
-
-//var h11 = 11
-//var hr11 = document.querySelector(".h11")
-
-//var h12 = 12
-//var hr12 = document.querySelector(".h12")
-
-//var h1 = 13
-//var hr1 = document.querySelector(".h1")
-
-//var h2 = 14
-//var hr2 = document.querySelector(".h2")
-
-//var h3 = 15
-//var hr3 = document.querySelector(".h3")
+ 
+    //converting from military time
+const militaryTimeConversion = (time) => {
+  if (time.includes("PM")) {
+    return parseInt(time.replace("PM", "")) + 12;
+  } else {
+    return parseInt(time.replace("AM", ""));
+  }
+};
 //Getting the hours from the page and converting them into numbers.
 //Also getting each textarea.
 var hr7 = document.querySelector(".hr7").textContent;
