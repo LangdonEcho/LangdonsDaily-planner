@@ -131,4 +131,5 @@ function colorcoding() {
     }
 }
 colorcoding();
+console.log(hours)
 });
