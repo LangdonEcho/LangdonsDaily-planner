@@ -63,71 +63,71 @@ $(".hour15").on("click", function() {
 $(".h3").val(localStorage.getItem("3PM"))
 
     //Gets the current time and turns the current hour into a number.
-var currentTime = moment().format('H');
-currentTime = parseInt(currentTime);
+    var currentTime = moment().format('H');
+    currentTime = parseInt(currentTime);
 
-var hr7 = 7
-var hr7 = document.querySelector(".h7")
+//var h7 = 7
+//var hr7 = document.querySelector(".h7")
 
-var hr8 = 8
-var hr8 = document.querySelector(".h8")
+//var h8 = 8
+//var hr8 = document.querySelector(".h8")
 
-var hr9 = 9
-var hr9 = document.querySelector(".h9")
+//var h9 = 9
+//var hr9 = document.querySelector(".h9")
 
-var hr10 = 10
-var hr10 = document.querySelector(".h10")
+//var h10 = 10
+//var hr10 = document.querySelector(".h10")
 
-var hr11 = 11
-var hr11 = document.querySelector(".h11")
+//var h11 = 11
+//var hr11 = document.querySelector(".h11")
 
-var hr12 = 12
-var hr12 = document.querySelector(".h12")
+//var h12 = 12
+//var hr12 = document.querySelector(".h12")
 
-var hr1 = 13
-var hr1 = document.querySelector(".h1")
+//var h1 = 13
+//var hr1 = document.querySelector(".h1")
 
-var hr2 = 14
-var hr2 = document.querySelector(".h2")
+//var h2 = 14
+//var hr2 = document.querySelector(".h2")
 
-var hr3 = 15
-var hr3 = document.querySelector(".h3")
+//var h3 = 15
+//var hr3 = document.querySelector(".h3")
 //Getting the hours from the page and converting them into numbers.
 //Also getting each textarea.
 var hr7 = document.querySelector(".hr7").textContent;
-hr7 = parseInt(hr7[0]);
+hr7 = parseInt(hr7.replace("AM", ''))
 var h7 = document.querySelector(".h7");
 
 var hr8 = document.querySelector(".hr8").textContent;
-hr8 = parseInt(hr8[1]) + 10;
+hr8 = parseInt(hr8.replace("AM", ''))
 var h8 = document.querySelector(".h8");
 
 var hr9 = document.querySelector(".hr9").textContent;
-hr9 = parseInt(hr9[1]) +10;
+hr9 = parseInt(hr9.replace("AM", ''))
 var h9 = document.querySelector(".h9");
 
 var hr10 = document.querySelector(".hr10").textContent;
-hr10 = parseInt(hr10[1]) + 10;
+hr10 = parseInt(hr10.replace("AM", ''))
 var h10 = document.querySelector(".h10");
 
 var hr11 = document.querySelector(".hr11").textContent;
-hr11 = parseInt(hr11[0]) +12;0
+hr11 = parseInt(hr11.replace("AM", ''))
 h11 = document.querySelector(".h11");
 
 var hr12 = document.querySelector(".hr12").textContent;
-hr12 = parseInt(hr12[0]) +12;
+hr12 = parseInt(hr12.replace("AM", ''))
 var h12 = document.querySelector(".h12");
 
 var hr1 = document.querySelector(".h1").textContent;
-hr1 = parseInt(hr1[0]) +12;
+hr1 = parseInt(hr1.replace("PM", ''))
 var h1 = document.querySelector(".h1");
 
 var hr2 = document.querySelector(".hr2").textContent;
-hr2 = parseInt(hr2[0]) +12;
+hr2 = parseInt(hr2.replace("PM", ''))
 var h2 = document.querySelector(".h2");
 
 var hr3 = document.querySelector(".hr3").textContent;
-hr3 = parseInt(hr3[0]) +12;
+hr3 = parseInt(hr3.replace("PM", ''))
 var h3 = document.querySelector(".h3");
 
 
